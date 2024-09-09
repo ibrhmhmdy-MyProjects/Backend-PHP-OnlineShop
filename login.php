@@ -1,0 +1,44 @@
+<?php require_once "inc/header.php" ?>
+
+<div class="container">
+  <div class="row">
+    <!-- Section: Design Block -->
+    <section class="text-center">
+      <div class="card mx-4 mx-md-5 my-5 shadow-5-strong">
+        <div class="card-body py-5 px-md-5">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-8">
+              <h2 class="fw-bold mb-5">Login now</h2>
+              <form action="" method="">
+                <!-- Email input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <label class="form-label" for="form3Example3">Email address</label>
+                  <input type="email" id="form3Example3" class="form-control" />
+                </div>
+
+                <!-- Password input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <label class="form-label" for="form3Example4">Password</label>
+                  <input type="password" id="form3Example4" class="form-control" />
+                </div>
+                <!-- Submit button -->
+                <div class="row">
+                  <div class="col-md-6">
+                    Not have Your Account <a href="./Register.php">Signup</a>
+                  </div>
+                  <div class="col-md-6">
+                    <!-- Submit button -->
+                    <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">
+                      Login
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section: Design Block -->
+  </div>
+</div>
