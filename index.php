@@ -1,13 +1,11 @@
 <?php include 'inc/header.php'; ?>
 
-
 <div class="container my-5">
     <div class="row">
         <?php
         $rows = $db->ReadAll("products");
         if($rows){
-
-        foreach($rows as $row){
+            foreach($rows as $row){
         ?>
         <div class="col-lg-4 mb-3">
             <div class="card">

@@ -27,16 +27,32 @@
                     </ul>
                 </div>
                 <nav class="navbar-nav ml-auto">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <?php $countUser = $db->CountRows("users"); ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="login.php">Login</a>
+                            <a class="nav-link" href="#">Users(<?= $countUser ?>)</a>
+                        </li>
+                        <?php
+                            if($session->hasSession("current_login")){
+                                $current_user = $session->Get("current_login");
+                                $user_id = $current_user['id'];
+                                $username = $current_user['username'];
+                                $email = $current_user['email'];
+                        ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><?= $username ?></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php">Logout</a>
+                            <a class="nav-link" href="handlers/handleLogout.php">Logout</a>
                         </li>
+                        <?php }else{ ?>
                         <li class="nav-item">
                             <a class="nav-link" href="register.php">Signup</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.php">Login</a>
+                        </li>
+                        <?php }?>
                     </ul>
                 </nav>
             </div>
