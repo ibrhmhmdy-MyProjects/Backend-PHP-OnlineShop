@@ -26,16 +26,24 @@ class MYSQL {
     $read_data = new QueryBuilder();
     $query = $read_data->SelectAll($table);
     $result = mysqli_query($this->Connect(),$query);
-    return $result ? $rows = mysqli_fetch_all($result,MYSQLI_ASSOC) : false;
+    return $result ? mysqli_fetch_all($result,MYSQLI_ASSOC) : false;
   }
+  
   public function ReadRow($table, $id){
     $read_data = new QueryBuilder();
     $query = $read_data->SelectRowByID($table, $id);
     $row = mysqli_query($this->Connect(),$query);
     $result = mysqli_fetch_assoc($row);
-    return mysqli_num_rows($row) > 0 ? $result : "Not Data Found";
+    return mysqli_num_rows($row) > 0 ? $result : false;
   }
 
+  public function SearchRow($table,$conditions){
+    $read_data = new QueryBuilder();
+    $query = $read_data->SelectRowByWhere($table, $conditions);
+    $row = mysqli_query($this->Connect(),$query);
+    $result = mysqli_fetch_assoc($row);
+    return mysqli_num_rows($row) > 0 ? $result : false;
+  }
 
   public function AddRow($table,$columns,$values){
     $query = new QueryBuilder();
@@ -70,6 +78,6 @@ class MYSQL {
     $query = $read_data->SelectColsByID($colName,$table, $id);
     $row = mysqli_query($this->Connect(),$query);
     $result = mysqli_fetch_assoc($row);
-    return mysqli_num_rows($row) > 0 ? $result[$colName] : "This Image Name is Not Found";
+    return mysqli_num_rows($row) > 0 ? $result[$colName] : false;
   }
 }

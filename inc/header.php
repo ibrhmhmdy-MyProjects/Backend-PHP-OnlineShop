@@ -24,6 +24,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="Add.php">Add Product</a>
                         </li>
+                    </ul>
+                </div>
+                <nav class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0>
                         <li class="nav-item">
                             <a class="nav-link" href="login.php">Login</a>
                         </li>
@@ -34,6 +38,6 @@
                             <a class="nav-link" href="register.php">Signup</a>
                         </li>
                     </ul>
-                </div>
+                </nav>
             </div>
         </nav>

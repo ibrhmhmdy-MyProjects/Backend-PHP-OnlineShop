@@ -16,7 +16,7 @@ if($req->hasRequest($req->POST("submit"))){
     $db->AddRow("users",
                 "username,email,password",
                 "'$username','$email','$password'");
-    $req->Redirect("../index.php");
+    $req->Redirect("../login.php");
   }else{
     $session->Set("errors",$valid->errors);
     $req->Redirect("../register.php");

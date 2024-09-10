@@ -14,6 +14,11 @@ class QueryBuilder
   {
     return "SELECT * FROM $table WHERE id ='$id'";
   }
+  // SELECT Rows From Table By Conditions
+  public function SelectRowByWhere($table, $conditions)
+  {
+    return "SELECT * FROM $table WHERE $conditions";
+  }
   // SELECT All Columns From Table By Conditions
   public function SelectAllWhere($table, $conditions)
   {
