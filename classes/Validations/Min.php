@@ -6,7 +6,7 @@ require_once "IValidations.php";
 use classes\Validations\IValidations;
 
 class Min implements IValidations {
-  
+
   public function Validate($field, $value)
   {
     if(\strlen($value) < 4){
