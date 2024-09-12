@@ -1,3 +1,3 @@
 # PHP
-# MYSQL
+# MYSQL (MYSQLI)
 # OOP
